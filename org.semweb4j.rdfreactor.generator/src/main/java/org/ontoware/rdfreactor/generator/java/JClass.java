@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.ontoware.rdf2go.model.node.URI;
 import org.ontoware.rdf2go.vocabulary.OWL;
@@ -42,7 +43,7 @@ public class JClass extends JMapped implements Comparable<JClass> {
     private static Logger log = LoggerFactory.getLogger(JClass.class);
     
     /** List of properties, represented by JProperty instances */
-    private List<JProperty> properties = new ArrayList<JProperty>();
+    private List<JProperty> properties = new CopyOnWriteArrayList<JProperty>();
     
     /** List of inverse properties, represented by JProperty instances */
     private List<JProperty> inverseProperties = new ArrayList<JProperty>();
